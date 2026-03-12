@@ -1,0 +1,219 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#fff5e6;
+text-align:center;
+}
+
+nav{
+background:#c0392b;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+}
+
+.menu{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:white;
+width:200px;
+margin:15px;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:180px;
+height:130px;
+border-radius:10px;
+}
+
+button{
+background:#27ae60;
+color:white;
+border:none;
+padding:12px 25px;
+font-size:18px;
+margin:30px;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+function placeOrder(){
+
+let items="";
+let total=0;
+
+function addItem(id,name,price){
+if(document.getElementById(id).checked){
+items+=name+" - ₹"+price+"<br>";
+total+=price;
+}
+}
+
+addItem("pizza","Pizza",200);
+addItem("burger","Burger",120);
+addItem("biryani","Biryani",250);
+addItem("pasta","Pasta",180);
+addItem("sandwich","Sandwich",100);
+addItem("fries","French Fries",90);
+addItem("icecream","Ice Cream",80);
+addItem("coffee","Coffee",60);
+
+addItem("roll","Chicken Roll",140);
+addItem("noodles","Noodles",150);
+addItem("friedrice","Fried Rice",160);
+addItem("momos","Momos",110);
+addItem("juice","Fruit Juice",70);
+addItem("cake","Chocolate Cake",120);
+
+localStorage.setItem("items",items);
+localStorage.setItem("total",total);
+
+window.location.href="bill.html";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="bill.html">Bill</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<h1>Our Menu</h1>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80">
+<h3>Pizza</h3>
+<p>₹200</p>
+<input type="checkbox" id="pizza">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<h3>Burger</h3>
+<p>₹120</p>
+<input type="checkbox" id="burger">
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Hyderabadi_Chicken_Biryani.jpg" alt="Biryani">
+
+<h3>Biryani</h3>
+<h3>Biryani</h3>
+<p>₹250</p>
+<input type="checkbox" id="biryani">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb">
+<h3>Pasta</h3>
+<p>₹180</p>
+<input type="checkbox" id="pasta">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af">
+<h3>Sandwich</h3>
+<p>₹100</p>
+<input type="checkbox" id="sandwich">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1576107232684-1279f390859f">
+<h3>French Fries</h3>
+<p>₹90</p>
+<input type="checkbox" id="fries">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb">
+<h3>Ice Cream</h3>
+<p>₹80</p>
+<input type="checkbox" id="icecream">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<h3>Coffee</h3>
+<p>₹60</p>
+<input type="checkbox" id="coffee">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+<h3>Chicken Roll</h3>
+<p>₹140</p>
+<input type="checkbox" id="roll">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585032226651-759b368d7246">
+<h3>Noodles</h3>
+<p>₹150</p>
+<input type="checkbox" id="noodles">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b">
+<h3>Fried Rice</h3>
+<p>₹160</p>
+<input type="checkbox" id="friedrice">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604909052743-94e838986d24">
+<h3>Momos</h3>
+<p>₹110</p>
+<input type="checkbox" id="momos">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888">
+<h3>Fruit Juice</h3>
+<p>₹70</p>
+<input type="checkbox" id="juice">
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+<h3>Chocolate Cake</h3>
+<p>₹120</p>
+<input type="checkbox" id="cake">
+</div>
+
+</div>
+
+<button onclick="placeOrder()">Place Order</button>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+ <html>
+<head>
+<title>Your Bill</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#fff5e6;
+text-align:center;
+}
+
+nav{
+background:#c0392b;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+}
+
+.bill{
+background:white;
+width:350px;
+margin:40px auto;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+</style>
+
+<script>
+
+function loadBill(){
+
+let items=localStorage.getItem("items");
+let total=localStorage.getItem("total");
+
+document.getElementById("items").innerHTML=items;
+document.getElementById("total").innerHTML="Total Bill: ₹ "+total;
+
+}
+
+</script>
+
+</head>
+
+<body onload="loadBill()">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="bill.html">Bill</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="bill">
+
+<h1>Your Order</h1>
+
+<div id="items"></div>
+
+<h2 id="total"></h2>
+
+</div>
+
+</body>
+</html>

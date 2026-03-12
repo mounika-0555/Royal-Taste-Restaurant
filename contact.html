@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#fff5e6;
+text-align:center;
+}
+
+nav{
+background:#c0392b;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+}
+
+.contact-box{
+background:white;
+width:400px;
+margin:50px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+input, textarea{
+width:90%;
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+background:#27ae60;
+color:white;
+border:none;
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#1e8449;
+}
+
+#success{
+color:green;
+font-weight:bold;
+margin-top:15px;
+}
+
+</style>
+
+<script>
+
+function sendMessage(){
+
+document.getElementById("success").innerHTML =
+"✅ Order Placed Successfully!";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="bill.html">Bill</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<h1>Contact Us</h1>
+
+<div class="contact-box">
+
+<h3>Royal Taste Restaurant</h3>
+
+<p>📍 Address: Hyderabad, India</p>
+<p>📞 Phone: +91 9876543210</p>
+<p>📧 Email: royaltaste@email.com</p>
+
+<h3>Send us a message</h3>
+
+<input type="text" placeholder="Your Name"><br>
+<input type="email" placeholder="Your Email"><br>
+
+<textarea placeholder="Your Message"></textarea><br>
+
+<button onclick="sendMessage()">Send Message</button>
+
+<p id="success"></p>
+
+</div>
+
+</body>
+</html>
